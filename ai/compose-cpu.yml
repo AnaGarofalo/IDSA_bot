@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  ollama:
+    container_name: ollama
+    image: langchain4j/ollama-orca-mini
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - 11434:11434
+
+volumes:
+  ollama: {}
+
+networks:
+  default:
+    name: IDSA_default
