@@ -1,5 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
 const { chatRequest } = require("./chatRequests");
+const { groups_responses } = require("./groups_responses");
 
 async function initTelegramBot() {
   // el TOKEN que se asigna al crear el bot (botfather)
@@ -13,16 +14,19 @@ async function initTelegramBot() {
   // Determina qué función se ejecutará al recibir un mensaje del usuario
   try {
     telegramBot.on("message", async (ctx) => {
-      const message = ctx.text.toLowerCase().trim();
+      const message = ctx.text ? ctx.text.toLowerCase().trim() : "";
       const sessionId = ctx.chat.id;
 
       if (!message) return;
 
-      const response = await chatRequest(message);
+      const response =
+        ctx.chat.type === "private"
+          ? await chatRequest(message)
+          : await groups_responses(ctx, message);
       if (!response) return;
       console.log(response);
 
-      telegramBot.sendMessage(sessionId, response.response);
+      telegramBot.sendMessage(sessionId, response);
     });
   } catch (error) {
     console.log();

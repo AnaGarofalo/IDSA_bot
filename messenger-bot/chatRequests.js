@@ -1,11 +1,12 @@
+const axios=require("axios")
+
 async function chatRequest(question) {
   try {
-    const response = await fetch(
+    console.log(question)
+    const response = await axios.post(
       // En la IP va la del host, en donde esta levantando el contenedor de ollama (Buscar en configuracion de red)
       "http://ollama:11434/api/generate",
-      {
-        method: "POST",
-        body: JSON.stringify({
+        {
           model: "IDSAmodel",
           prompt: question,
           stream: false,
@@ -16,12 +17,12 @@ async function chatRequest(question) {
           //         content: message,
           //     },
           // ],
-        }),
-      }
+        }
     );
 
-    const data = await response.json();
+    const data = response.data;
     console.log(data);
+    return data.response
   } catch (error) {
     console.log(error);
   }

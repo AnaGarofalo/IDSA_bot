@@ -19,68 +19,85 @@ async function initWhatsappBot() {
   /* WHATSAPP Events */
   whatsappSocket.ev.on("creds.update", saveCreds);
 
-  whatsappSocket.ev.on("connection.update", (update) => {
-    const { connection, lastDisconnect, qr } = update || {};
+whatsappSocket.ev.on("connection.update", (update) => {
+      const { connection, lastDisconnect, qr } = update || {};
 
-    //   console.log({
-    //     connection,
-    //     lastDisconnect,
-    //     qr,
-    //   });
+      console.log("connection", connection);
+      console.log("qr", qr);
 
-    switch (connection) {
-      case "connecting":
-        /*
-              - Al momento de escanear el QR...
-              */
+      switch (connection) {
+        case "connecting":
+          /*
+        - Al momento de escanear el QR...
+        */
+          break;
+        case "close":
+          /*
+        - El usuario manualmente borro la sesion.
+        - Se acabo el tiempo de luego de varias actualizaciones de QR (no se ha escaneado el mismo).
+        */
 
-        break;
-      case "close":
-        /*
-              - El usuario manualmente borro la sesion.
-              - Se acabo el tiempo de luego de varias actualizaciones de QR (no se ha escaneado el mismo).
-              */
+          // console.log('state', state)
+          // state.keys.clear && state.keys.clear()
 
-        const userLoggedOut =
-          lastDisconnect?.error?.output?.statusCode ===
-          DisconnectReason.loggedOut;
+          console.log("DisconnectReason.loggedOut", DisconnectReason.loggedOut);
 
-        console.info(
-          `❌ Conexión cerrada por: ${lastDisconnect.error}\n Usuario cerró la sesión?: ${userLoggedOut}`
-        );
+          const shouldReconnect =
+            lastDisconnect?.error?.output?.statusCode !==
+            DisconnectReason.loggedOut;
 
-        console.log("userLoggedOut", userLoggedOut);
+          console.info(
+            `❌ Conexión cerrada por: ${lastDisconnect.error}\nReconectando: ${shouldReconnect}`
+          );
 
-        if (userLoggedOut) {
-          try {
-            const sessionPath = path.resolve(__dirname, "auth_info_baileys");
+          // Se reconecta si es que la sesion no se ha cerrado...
+          if (shouldReconnect) {
+            setTimeout(() => initWhatsappBot(), 30000);
+          } else {
+            // delete session saved
+            const fromPath = path.resolve(__dirname);
+            console.log("fromPath", fromPath);
 
-            fs.rmSync(sessionPath, { recursive: true, force: true });
-          } catch (error) {
-            throw new Error(error);
+            fs.rmdir("./auth_info_baileys", (err) => {
+              if (err) {
+                console.error(err);
+              } else {
+                console.info("exito");
+              }
+            });
+
+            // fs.rmdir(fromPath.concat('/auth_info_baileys'), (err) => {
+            //   if (err) {
+            //     console.error(err)
+            //   } else {
+            //     console.info('exito')
+            //   }
+            // })
           }
-        }
-        break;
-      case "open":
+
+          break;
+        case "open":
+          /*
+        - Luego de haber escaneado el QR y este ha sido exitoso.
+        */
+          console.info("🟢 Bot WhatsApp conectado!");
+
+
+          break;
+        default:
         /*
-              - Luego de haber escaneado el QR y este ha sido exitoso.
-              */
+        - No existe conexion (Actualizacion de QR)
+        */
+        // mqttSocket.publish(
+        //   'iotab/whatsapp/qr/auth',
+        //   JSON.stringify({
+        //     qr: qr,
+        //     status: true,
+        //   }),
+        // )
 
-        console.info("🟢 Bot WhatsApp conectado!");
-
-        break;
-      default:
-        /*
-              - No existe conexion (Actualizacion de QR)
-              */
-
-        if (qr) {
-          console.info("📧 Se ha enviado un email con el QR!");
-        }
-
-        break;
-    }
-  });
+        // console.info('📧 Se ha enviado un email con el QR!')
+}});
 
   whatsappSocket.ev.on("messages.upsert", async (m) => {
     const messages = m.messages[0];
@@ -96,13 +113,14 @@ async function initWhatsappBot() {
     };
     const history = [];
 
+    if (isHost) return
     console.log("msg", msg);
 
     if (!msg.text) return;
     const response = await chatRequest(msg.text);
 
     if (!response) return;
-    whatsappSocket.sendMessage(remoteJid, response.response);
+    whatsappSocket.sendMessage(remoteJid, {text:response});
     console.log(response);
   });
 }

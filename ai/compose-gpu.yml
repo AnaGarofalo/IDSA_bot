@@ -11,7 +11,7 @@ services:
               capabilities:
                 - gpu
     container_name: ollama
-    image: ollama/ollama
+    image: langchain4j/ollama-orca-mini
     volumes:
       - ollama:/root/.ollama
     ports:

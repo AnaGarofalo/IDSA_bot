@@ -1,7 +1,7 @@
 const { initTelegramBot } = require("./telegramBot");
 const { initWhatsappBot } = require("./whatsappBot");
 
-initWhatsappBot();
+// initWhatsappBot();
 initTelegramBot();
 
 // async function checkConnection() {
