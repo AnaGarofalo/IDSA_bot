@@ -1,0 +1,118 @@
+administrador ->
+
+
+
+OBJ 1: 
+la empresa tiene relojes y llaveros
+mapa con dispositivos en tiempo real
+metrics -> otro componente para personas
+columnas:
+	id
+	nombre
+	batería
+	estado (conectado desconectado)
+	alerta SOS
+	en casa o no
+	cantidad de pasos
+	cantidad de pulsaciones
+	botón contactos 
+	botón solicitar pulsaciones
+	todo igual
+	SIN MODOS
+	
+	
+	
+caídas y botón sos activan modo SOS
+monitoreo caídas y botón SOS
+incidencia atendida / no atendida
+
+
+Alertas:
+- pendientes
+- en curso
+- finalizadas
+- rechazada
+
+
+
+ambulancia confirma con el botón que se encontró con el paciente
+
+
+REGISTRO (comentarios, usuario que la atendió)
+
+
+
+
+
+
+
+
+TIKETS
+- Status : INIT / ATENDIDOS / FINALIZADOS / CANCELADOS
+
+- Ambulancia? (id smartphone)
+- ID_PACIENTE
+- ID_ADMIN
+- Motivo de la emergencia -> caída / SOS
+- Comentarios
+
+
+
+
+PEDIRLE A GASTÓN:
+ - Commit
+ - Crear archivo para modelos
+ - Ejemplo de mensaje enviado al mqtt con pulsaciones
+ 
+
+
+
+CAMBIAR:
+- Que el admin pueda cerrar / cambiar estado / comentar tickets
+- Que los estados de emergencia no se cierren solos pasados los 20'
+- Que se active el estado sos con el botón y con caída
+- Que los dispositivos se creen en modo seguro (en este caso, no cambiarían de modo)
+
+TODO BACK:
+- Crear modelo
+- CRUD modelo (es importante que la funcionalidad de crear ticket esté en una función aparte, para que se pueda ejecutar desde webhook ante una alarma sos o de caída) - Para la seguridad de las rutas podríamos checkear la auth del admin que corresponde al canal
+
+TODO FRONT:
+
+
+
+
+
+PROPUESTAS A FUTURO
+- Darle acceso al paciente a la ubicación de la ambulancia
+- Configuraciones globales para los dispositivos
+
+
+
+
+PEDIDOS YA 
+
+NUEVA APLICACIÓN
+ - login
+ - botón -> llamar
+ razones:
+ 	- falsa alarma
+ 	- emergencia (ROJO 01)
+ 	- urgencia (AMARILLO 02)
+ 	- consulta (VERDE 03)
+ 	
+ 	
+MONITOREO
+	- mapa: afiliados, vehículos todo en gris -> cuando se presiona el botón
+	- emergencia -> modal para elegir ambulancia x cercanía y tipo de emergencia
+	- al asignar la ambulancia le llega un mensaje o notificación con la data y un botón que diga ver mapa y dos círculos para aceptar o rechazar la emergencia. Si la rechaza tiene que indicar un motivo. Si la acepta la aplicación va a compartir la ubicación del dispositivo en tiempo real. se pone el ícono del mapa del monitoreo del color correspondiente. El usuario se va a ver a sí mismo y a la ambulancia. El paramédico tiene un botón de finalizar para dar por concluida la emergencia. Puede haber un botón de "arribo" cuando llega a la ubicación. El arribo puede ser automático
+
+
+APLICACIÓN PARAMÉDICO
+ - login
+ - pantalla principal -> sin eventos
+ 	status aplicación: habilitado / deshabilitado
+ 			   habilitado = disponible para emergencias
+ 			   
+
+
