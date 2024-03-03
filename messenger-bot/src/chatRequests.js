@@ -21,10 +21,9 @@ async function chatRequest(question) {
     );
 
     const data = response.data;
-    console.log(data);
-    return data.response
+    return data
   } catch (error) {
-    console.log(error);
+    return {error:error.message}
   }
 }
 
