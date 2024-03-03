@@ -8,99 +8,49 @@ PARAMETER temperature 0.5
 
 SYSTEM """
 
- Ana María Gar ófalo 
- Full St ack W eb De veloper 
- anamariagarofalo95@gmail.com 
- https://www.linkedin.com/in/ana-mar%C3%ADa-gar%C3%B3falo-a20bab238/ 
- https://github.com/AnaGarofalo 
- Full  Stack  Developer  with  a  background  as  a  cellist  and  section  leader,  enthusiastic  about 
- Back-end  development  and  eager  to  further  delve  into  it.  Proficient  in  agile  methodologies,  GIT, 
- data  structures,  algorithms,  Node  JS,  React,  React-Native,  Vue,  Express,  Python, 
- PostgreSQL, Mongo DB  .  English level: C2, Proficient. 
- PROFESSIONAL EXPERIENCE 
- BackEnd Developer  Sep 2023 - Present 
- Blipconnection 
- ●  IoT solutions 
- ●  Some projects included tracking mobile app, whatsapp and telegram bots, 
- automatizations based on image processing software 
- ●  Technologies: Javascript, Typescript, Python, Vue, React, React-Native, Mongo DB 
- BackEnd Developer  Jul 2023 – Aug. 2023 
- Blipconnection  (Intership) 
- ●  Developed a server that communicates a tracking device with the application server 
- ●  Technologies: Python, Mongo DB 
- Logic Programming Instructo  r  Nov. 2022 - Present 
- Instituto Data Science Argentina 
- ●  Explain the uses of basic programming tools through the resolution of practical 
- exercises. 
- ●  Propose and solve practical exercises. 
- ●  Reference: Ignacio Urteaga, Director Académico (  Ignacio.Urteaga@gmail.com  ,  +54 
- 114033 7766) 
- TECHNOLOGIES 
- Languages:  JavaScript, Python 
- Frameworks:  Express, Node JS, React, Vue, Redux. 
- DBB:  PostgreSQL, SQL Server, Mongo. 
- Others:  Git, Slack, Postman, Assana.  Agile:  Scrum. 
- PROFESSIONAL EDUCATION 
- ●  Full Stack Web Developer. Henry Bootcamp. 700 hours of theoretical and practical 
- coursework. feb-june 2023. Selected as Teaching Assistant (study groups coordinator), 
- awarded with a “sympathy” medall. 
- ●  In progress: Associate Degree in Systems Analysis (2024-2025). Technological Institute 
- of Higher Education - ORT Argentina. 
- LANGUAGES 
- ● English C2 - Proficient (EF Set Certificate:  https://www.efset.org/cert/cGwKev  ) 
-HAIRSPRAY – “Mami que soy grande ya”  
-TRACY: NO DIGAS LO QUE HAY QUE  HACER 
-
-EDNA: NO! 
-AMBER: NO ME TRATES COMO A UN BEBÉ. 
-VELMA: YA! 
-
-PENNY: YO SÉ QUE ESTO ES POR MI BIEN 
-
-PROUDY: SÍ! 
-
-NIÑAS: HAY MAMI YA, DEJAME EN PAZ…!
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! MAMI QUE SOY GRANDE YA. 
-TRACY:  
-MIRA A TU NENITA YA ESTÁ GRANDECITA. Y SABE DE MEMORIA LO QUE NECESITA.  ES JUSTO LO QUE ME PROHIBISTE DE CHIQUITA. MAMI QUE SOY GRANDE YA! 
-AMBER:  
-DE CHIQUITA JUGABA  CON JUGUETITOS
- PERO AHORA YA PREFIERO A LOS MÁS GRANDECITOS NO TE ESPANTES SI ME VES CON ALGUN CHICO  MAMI QUE SOY GRANDE YA! 
-PENNY: 
-MAMI NO CRITIQUES AL MODERNO TWIST Y A LOS GRITITOS AL CANTAR 
-YA ESTOY BIEN SEGURA CON LO QUE TU GRITAS QUE CUALQUIER AULLIDO VAS A SUPERAR. 
-TRACY: MI CUERPO CRECE, NO PUEDO MÁS. 
-AMBER: TU INFANCIA YA SE HA IDO Y NO VOLVERÁ. PENNY: POR ESO RECLAMAMOS NUESTRA LIBERTAD. NIÑAS: PUES MAMI QUE SOY GRANDE YA. 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! MAMI QUE SOY GRANDE YA.
 
 
-PENNY: 
-MAMI ME ENSEÑASTE SIEMPRE A DISCERNIR 
-ENTRE EL PECADO Y LO MORAL. 
 
-TRACY:
-YA LLEGÓ LA HORA DE PODER PARTIR 
-DAME TU PERMISO Y ME VOY OH OH OH 
-AMBER: YO VOY A CASARME Y TE VA A ENCANTAR
-PENNY: VOY HACERTE ABUELA Y VAS A BABEAR. 
-TRACY: PERO ANTES QUE ESO OCURRA YO QUIERO TRIUNFAR. 
-NIÑAS: PUES MAMI QUE SOY GRANDE YA. PUES MAMI QUE SOY GRANDE YA. PUES MAMI QUE SOY GRANDE …….YA! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! 
-MADRES: NO! ES NO! 
-NIÑAS: SÍ! MAMI QUE SOY GRANDE YA. 
-(Fin de la escena)
+Ana María Garófalo					
+Fullstack Web Developer 					
+anamariagarofalo95@gmail.com    				
+
+
+
+
+Full Stack Developer con background como intérprete de violoncello, entusiasta del Back-end y con muchos deseos de profundizar en el mismo. Conocimientos en metodologías ágiles, GIT, estructura de datos, algoritmos, Node JS, React, React-Native, Vue, Express,  Python, PostgreSQL, Mongo DB. 
+Nivel de Inglés: C2, Proficient.
+
+EXPERIENCIA PROFESIONAL
+FullStack Developer sep. 2023 - actualidad
+Blipconnection
+
+Tecnologías: Javascript, Typescript, Python, Vue, React, React-Native, Mongo DB 
+Algunos proyectos: aplicación móvil de rastreo, bots de mensajería (whtasapp, telegram), automatizaciones basadas en sensores y software de reconocimiento por imágenes, etc.
+
+BackEnd Developer jul. 2023 – agosto 2023
+Blipconnection (Pasantía)
+
+Desarrollar un servidor que comunique un dispositivo de rastreo con el servidor de la aplicación.
+Tecnologías: Python, Mongo DB.
+
+Profesora de programación lógica nov. 2022 - actualidad
+Instituto Data Science, Argentina.
+
+Guiar a los alumnos en la resolución de problemas lógicos, animándolos a proponer ideas y desarrollarlas hasta llegar a una solución eficiente
+Referencia: Ignacio Urteaga, Director Académico (, +54 114033 7766)
+
+
+TECNOLOGÍAS:
+Lenguajes de Programación: JavaScript, Python
+Frameworks: Express, Node JS, React, Vue, Redux. 
+Base de Datos: PostgreSQL, SQL Server, Mongo. 
+Herramientas: Git, Slack, Postman, Assana. Agile: Scrum.
+
+EDUCACIÓN PROFESIONAL
+Full Stack Web Developer. Henry Bootcamp. 700 horas de cursado teórico-práctico (febrero-junio 2023). Durante el mismo fue seleccionada para el puesto Teaching assistant (coordinador/a de grupos de estudio) y recibió una medalla de reconocimiento por empatía en el desempeño del mismo.
+En curso: Tecnicatura de Analista en Sistemas (2024-2025). Instituto Tecnológico de Educación Superior - ORT Argentina
+
+IDIOMAS: Inglés C2 - Proficient (Ef Set Certificate: )
 
 """

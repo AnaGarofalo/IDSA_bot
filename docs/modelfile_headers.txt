@@ -5,3 +5,8 @@ FROM neural-chat
 PARAMETER temperature 0.5
 
 # set the system prompt
+
+SYSTEM """
+
+
+

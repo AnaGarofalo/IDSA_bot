@@ -6,11 +6,11 @@ import os
 
 
 # current_dir = os.getcwd()
-current_dir = "/home/ana/Documentos/Blipconnection/IDSA/docs/"
+current_dir = "/root/IDSA_bot/docs/"
 files = os.listdir(current_dir)
 
 headers = open(current_dir+'modelfile_headers.txt')
-final_text = headers.read() + '\n\nSYSTEM """\n\n'
+final_text = headers.read() 
 headers.close()
 
 for file in files:
@@ -31,7 +31,7 @@ for file in files:
         file.close()
 
 
-f = open('/home/ana/Documentos/Blipconnection/IDSA/ai/Modelfile', 'w')
+f = open('/root/IDSA_bot/ai/Modelfile', 'w')
 
 f.write(final_text + '\n\n"""') 
 
