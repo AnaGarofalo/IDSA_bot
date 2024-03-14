@@ -10,7 +10,7 @@ current_dir = "../docs/"
 files = os.listdir(current_dir)
 
 headers = open(current_dir+'/modelfile_headers.txt')
-final_text = headers.read() + '\n\nSYSTEM """\n\n'
+final_text = headers.read() 
 headers.close()
 
 for file in files:

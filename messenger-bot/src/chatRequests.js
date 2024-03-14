@@ -2,13 +2,12 @@ const axios=require("axios")
 
 async function chatRequest(question) {
   try {
-    console.log(question)
     const response = await axios.post(
       // En la IP va la del host, en donde esta levantando el contenedor de ollama (Buscar en configuracion de red)
       "http://ollama:11434/api/generate",
         {
           model: "IDSAmodel",
-          prompt: question,
+          prompt: question+" Respondé de manera concisa",
           stream: false,
           // stream: true,
           // messages: [

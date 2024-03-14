@@ -11,7 +11,7 @@ async function initTelegramBot() {
   const options = {
     polling: true,
   };
-
+ 
   const telegramBot = new TelegramBot(TOKEN, options);
 
   // Determina qué función se ejecutará al recibir un mensaje del usuario
@@ -27,9 +27,14 @@ async function initTelegramBot() {
       let response
       if (!message) return;
       if (ctx.chat.type === "private"){
-
         console.log("From:", ctx.chat.first_name+" "+ ctx.chat.last_name)
-        response = await chatRequest(message)
+
+        if(message.includes("/start")){
+          response = {response:`👋🏼 ¡Hola! Soy el asistente virtual del 🎓 Instituto Data Science Argentina, ¿en qué te puedo ayudar?`}
+        } else {
+
+          response = await chatRequest(message)
+        }
 
       } else if (!keyWords.every(str=>!message.includes(str))){
 
@@ -51,6 +56,7 @@ async function initTelegramBot() {
       } else if (response.error){
         console.log("Error:", response.error)
         telegramBot.sendMessage(DEV_ID, response.error);
+        telegramBot.sendMessage(sessionId, "Lo sentimos, en este momento el bot se encuentra en mantenimiento y no podrá responder. Por favor, intente más tarde.");
       }
       console.log()
 

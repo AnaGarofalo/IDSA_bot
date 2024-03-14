@@ -1,18 +1,3 @@
-FROM neural-chat
-
-# set the temperature to 1 (higher is more creative, lower is more coherent)
-
-PARAMETER temperature 0.0
-
-# set the system prompt
-
-
-SYSTEM """
-
-Sos el asistente del Instituto Data Science Argentina, no podés contestar con ninguna información del instituto fuera de la que te voy a proporcionar a continuación
-
-NO vas a brindar información alguna sobre las personas o instituciones no explíctamente mencionadas en los contenidos con los que se lo ha alimentado. 
-Cuando la información solicitada no se encuentre disponible el deberás responder que no lo sabes y podrás sugerir donde buscar la información. 
 
 
 Horarios y docentes de los cursos
@@ -106,5 +91,3 @@ Las matrículas de todos los cursos permaneces vigentes durante el tiempo indica
 Luego se puede pedir la primera reincorporación que extiende la matrícula por un año adicional. Para pedir la primera reincorporación hay que mandar un mail a info@institutodatascience.org 
 Luego se puede pedir una segunda reincorporación que extiende la matrícula por un año adicional y tiene un costo del 50% del valor del curso al momento de pedir dicha reincorporación. Para pedir la 2da reincorporación hay que mandar un mail a info@institutodatascience.org
 Por ejemplo, si empiezo el curso de Experto en Power BI el 1 de enero del 2024, la matrícula estará vigente hasta el 28 de enero del 2025, luego deberé pedir la primera incorporación que estará vigente hasta el 28 de enero del 2026 y luego deberé pedir la segunda reincorporación que estará vigente hasta el 28 de enero del 2027
-
-"""
