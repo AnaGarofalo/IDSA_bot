@@ -36,7 +36,7 @@ case $option_input in
 esac
 
 if [ "$option_input" -eq 1 ] || [ "$option_input" -eq 2 ]; then
-  pip install python-docx PyPDF2
+  # pip install python-docx PyPDF2
   python3 /root/IDSA_bot/docs/add_data.py
   docker cp ./Modelfile ollama:/Modelfile
   docker cp ./Modelfile ollama:/Modelfile

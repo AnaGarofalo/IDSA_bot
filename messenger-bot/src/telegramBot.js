@@ -1,8 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
 const { chatRequest } = require("./chatRequests");
 require("dotenv").config()
-
-const {DEV_ID} = process.env
+const { DEV_ID } = process.env
 
 const keyWords = ["link", "hora", "empieza"];
 
@@ -12,7 +11,7 @@ async function initTelegramBot() {
   const options = {
     polling: true,
   };
-
+ 
   const telegramBot = new TelegramBot(TOKEN, options);
 
   // Determina qué función se ejecutará al recibir un mensaje del usuario
@@ -21,31 +20,46 @@ async function initTelegramBot() {
       const message = ctx.text ? ctx.text.toLowerCase().trim() : "";
       const sessionId = ctx.chat.id;
 
-      if (!message) return;
       console.log()
-      console.log("-------- New Message -------")
-      console.log("Id: ", ctx.chat.id)
-      console.log(ctx.chat.type === "private"? "From: "+ctx.chat.first_name+" "+ctx.chat.last_name:"From group: "+ctx.chat.title)
+      console.log("------- New Message -------")
+      console.log("Id:", sessionId)
+      
+      let response
+      if (!message) return;
+      if (ctx.chat.type === "private"){
+        console.log("From:", ctx.chat.first_name+" "+ ctx.chat.last_name)
+
+        if(message.includes("/start")){
+          response = {response:`👋🏼 ¡Hola! Soy el asistente virtual del 🎓 Instituto Data Science Argentina, ¿en qué te puedo ayudar?`}
+        } else {
+
+          response = await chatRequest(message)
+        }
+
+      } else if (!keyWords.every(str=>!message.includes(str))){
+
+        console.log("From:", ctx.chat.title)
+        response = await chatRequest(message)
+
+      }
       console.log("Message:", message)
 
-      let response;
-      
-      if(ctx.chat.type === "private") response = await chatRequest(message)
-      else if (!keyWords.every((word) => !message.includes(word))) response = await chatRequest(message)
+      if (!response) return;
+      if (response.response){
 
-      if (!response) return      
-      else if(response.response){ 
-        const response_time = response.total_duration/1000000000
-        telegramBot.sendMessage(sessionId, response.response)
-        console.log("Response time:", response_time)
+        console.log("Response:", response.response)
+        console.log("Response time:", response.total_duration/1000000000)
         console.log("Words:", response.response.split(" ").length)
-        console.log("Time / Words:", response_time/response.response.split(" ").length)
-        console.log("Response:", response.response);
-      } else if (response.error){ 
-        telegramBot.sendMessage(DEV_ID, response.error)
-        console.log("Error:", response.error);
-      };
+        console.log("Seconds / words:", response.total_duration/response.response.split(" ").length/1000000000)
+
+        telegramBot.sendMessage(sessionId, response.response);
+      } else if (response.error){
+        console.log("Error:", response.error)
+        telegramBot.sendMessage(DEV_ID, response.error);
+        telegramBot.sendMessage(sessionId, "Lo sentimos, en este momento el bot se encuentra en mantenimiento y no podrá responder. Por favor, intente más tarde.");
+      }
       console.log()
+
     });
   } catch (error) {
     console.log();

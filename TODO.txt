@@ -1,0 +1,6 @@
+
+ - Probar con más documentos
+ - Mejorar el rendimiento del heartbeat
+
+ 
+ 

@@ -7,7 +7,7 @@ async function chatRequest(question) {
       "http://ollama:11434/api/generate",
         {
           model: "IDSAmodel",
-          prompt: question + "Responde con la información que tengas del Instituto Data Science Argentina",
+          prompt: question+" Respondé de manera concisa",
           stream: false,
           // stream: true,
           // messages: [
@@ -23,7 +23,6 @@ async function chatRequest(question) {
     const data = response.data;
     return data
   } catch (error) {
-    console.log(error.message);
     return {error:error.message}
   }
 }

@@ -2,9 +2,10 @@ FROM neural-chat
 
 # set the temperature to 1 (higher is more creative, lower is more coherent)
 
-PARAMETER temperature 0.5
+PARAMETER temperature 0.0
 
 # set the system prompt
+
 
 SYSTEM """
 

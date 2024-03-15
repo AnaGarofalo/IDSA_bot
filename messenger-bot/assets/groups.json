@@ -1,0 +1,67 @@
+[
+    {
+      "prob_est": {
+        "text": "*Probabilidad y Estadística*\nSe cursa los sábados a las 09:30 hs. Inicia el primer sábado de cada mes par. El link al zoom es:  https://us06web.zoom.us/j/89687373423. El link a las grabaciones es: https://www.dropbox.com/sh/q6t3pqhbpk07d20/AACto9UDGaFeHN3xA7ShEO6qa?dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "prog_log": {
+        "text": "*Programación Lógica*\nSe cursa los sábados a las 11:00 hs. Inicia el primer sábado de cada mes. El link al zoom es:  https://us06web.zoom.us/j/81639326794. El link a las grabaciones es: https://www.dropbox.com/sh/hxk9fg5hte7qjbk/AAC4xg4Yn_QXipqLOfkdnoD6a?dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "base_datos": {
+        "text": "*Base de Datos*\nSe cursa los sábados a las 12:30 hs. Inicia el primer sábado de cada mes par (Febrero, Abril, Junio, Agosto, Octubre, Diciembre). El link al zoom es: https://us06web.zoom.us/j/89907365159. El link a las grabaciones es: https://www.dropbox.com/sh/872njehdknxymuo/AABPTOuaE954w2f5qmrywKpfa?dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "intro_conc": {
+        "text": "*Introducción Conceptual*\nEl turno impar de introducción conceptual se dicta los lunes a las 19 hs. El link al zoom es: https://us06web.zoom.us/j/89282513696. El turno par de introducción conceptual se dicta los lunes a las 21:30 hs. El link al zoom es: https://us06web.zoom.us/j/84063268373. El link a las grabaciones de ambos turnos es: https://www.dropbox.com/sh/r6dz43hic1rm91k/AACsTA4TbilIlbdi38XbRalDa?dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "intro_R": {
+        "text": "*Introducción a R*\nEl turno impar de introducción a R se dicta los lunes a las 21:30 hs. El link al zoom es: https://us06web.zoom.us/j/87399432925. El turno par de introducción a R se dicta los miércoles a las 21:30 hs. El link al zoom es: https://us06web.zoom.us/j/87399432925. El link a las grabaciones de ambos turnos es: https://www.dropbox.com/sh/1joukq9c0rdy9c0/AADwXsmZEh029QOAiW3pQkK6a?dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "intro_python": {
+        "text": "*Introducción a Python*\nEl turno impar de introducción a Python se dicta los martes a las 19:00 hs. El link al zoom es: https://us06web.zoom.us/j/85284433578. El turno par de introducción a Python se dicta los jueves a las 19:00 hs. El link al zoom es: https://us06web.zoom.us/j/85284433578. El link a las grabaciones de ambos turnos es: https://www.dropbox.com/sh/31vj654rvesol0m/AAD4wvlXFYIbs83ntAGB2TLVa?dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "R_DCD": {
+        "text": "*Circular R (DCD)*\nLas clases teóricas son los Lunes 20:15 hs. El link al zoom es: https://us06web.zoom.us/j/87009852952. El link a las grabaciones es: https://www.dropbox.com/sh/8vaoo6yeamoxdz7/AACRFCFwAaM_MEI--eu1O-jGa?dl=0.\nLas clases prácticas son los Viernes 21:30 hs. El link al zoom es: https://us06web.zoom.us/j/81092183169. El link a las grabaciones es: https://www.dropbox.com/sh/hbmgcmjmcl1uccg/AABpf_lemqwrC_PDNAOZNy3Ta?dl=0",
+        "groups": [
+          "Diplomatura en ciencia de datos",
+          "Diplomatura en ciencia de datos con R + Python"
+        ]
+      },
+      "R_DDA": {
+        "text": "*Circular R (DDA)*\nLas clases tienen lugar los jueves a las 19 hs. Las clases duran de 30 a 45 minutos. El link de acceso al zoom es: https://us06web.zoom.us/j/89060828919. El link de acceso a las grabaciones es: https://www.dropbox.com/sh/qcy4iyfyptgh3mt/AAAwLRs-6aTRzsA0wM437IIaa?dl=0",
+        "groups": ["Diplomatura en data analytics con R y Python"]
+      },
+      "python": {
+        "text": "*Circular Python*\nLas clases tienen lugar los Martes 19:30 hs. Las clases duran entre 1 y 3 horas. El link de acceso al zoom es: https://us06web.zoom.us/j/88124020422. El link de acceso a las grabaciones es:  https://www.dropbox.com/sh/kt95a5q8e161am8/AABGgpP8ikJ0WW8oLg1qcRlqa?dl=0",
+        "groups": [
+          "Diplomatura en Python orientado a científico de datos",
+          "Diplomatura en ciencia de datos con R y Python",
+          "Diplomatura en Data Analytics con R y Python"
+        ]
+      },
+      "R_ML": {
+        "text": "*Circular R (ML)*\nLas clases son los jueves 20:15 hs. El link de acceso al zoom es:  https://us06web.zoom.us/j/87536440674. El link de acceso a las grabaciones de las clases teóricas es: https://www.dropbox.com/scl/fo/adcqbcj0vz3iypbvgbowc/h?rlkey=z3w0yk2dyhy3nlsozmt6g8ko2&dl=0. El link de acceso a las grabaciones de las clases prácticas es: https://www.dropbox.com/sh/z2zuql9mrss8jvr/AAAbbCH-lJTjbEkyj8x00_NYa?dl=0",
+        "groups": ["Machine Learning con R"]
+      },
+      "python_ML": {
+        "text": "*Circular Python (ML)*\n// Las clases son los Jueves 20:30 hs. El link de acceso al zoom es: https://us06web.zoom.us/j/82603817293. El link de acceso a las grabaciones a las clases teóricas es: https://www.dropbox.com/sh/cpsy8oatju0fypj/AABhLynGPTE_Dlr2AyuexhDJa?dl=0. El link de acceso a las grabaciones de las clases prácticas es: https://www.dropbox.com/sh/tb0ugbbdn52javn/AACMado20pvJo1gQ7UGDr52Ba?dl=0",
+        "groups": ["Machine Learning con Python"]
+      },
+      "complementario": {
+        "text": "*Circular Complementario*\nLas clases son los Jueves 21:30 hs. Las clases duran entre 45 y 60 minutos. El link de acceso al zoom es: https://us06web.zoom.us/j/85097235968. El link de acceso a las grabaciones es: https://www.dropbox.com/sh/c6qb1ucb4sjsttb/AADYbfga82l3HYnWwprogDXFa?dl=0",
+        "groups": ["Curso circular complementario para DCD R+P"]
+      },
+      "taller_progr": {
+        "text": "*Taller Complementario de Programación*\nLas clases son los sábados a las 11:00 hs. El link de acceso al zoom es:  https://us06web.zoom.us/j/89055900339. El link de acceso a las grabaciones es: https://www.dropbox.com/scl/fo/1yvuq4aj8vwbo6e3a5qo7/h?rlkey=vcrtriepf1o63q2wv77zydnpe&dl=0",
+        "groups": ["Nivelación Positiva"]
+      },
+      "tutorias": {
+        "text": "*Tutorías proyecto final:*\nLas clases son los lunes 18 hs. El link de acceso al zoom es: https://us06web.zoom.us/j/85893957682",
+        "groups": []
+      }
+    }
+  ]
