@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  ollama2:
+    container_name: ollama2
+    image: ollama/ollama
+    volumes:
+      - ollama2:/root/.ollama2
+    ports:
+      - 11432:11434
+
+volumes:
+  ollama2: {}
+
+networks:
+  default:
+    name: IDSA_default
+    external: true

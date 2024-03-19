@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities:
+                - gpu
+    container_name: ollama
+    image: langchain4j/ollama-orca-mini
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - 11434:11434
+
+volumes:
+  ollama: {}
+
+networks:
+  default:
+    name: IDSA_default

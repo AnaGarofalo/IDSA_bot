@@ -22,9 +22,27 @@ async function checkConnection() {
             // ],
           }
       );
+      console.log(" - hbt1 - ")
+
+      const response2 = await axios.post(
+        // En la IP va la del host, en donde esta levantando el contenedor de ollama (Buscar en configuracion de red)
+        "http://ollama2:11434/api/generate",
+          {
+            model: "IDSAmodel",
+            prompt: "Hola, me dirías de manera concisa cuánto es 2 + 2?",
+            stream: false,
+            // stream: true,
+            // messages: [
+            //     {
+            //         role: 'user',
+            //         content: message,
+            //     },
+            // ],
+          }
+      );
   
-      const data = response.data;
-      console.log(" - hbt - ")
+
+      console.log(" - hbt2 - ")
     } catch (error) {
     console.log(error.message)
     }
@@ -43,7 +61,7 @@ async function test(){
         console.log("Response:", response.response)
         console.log("Error:", response.error)
         console.log("Response time:", response.total_duration/1000000000)
-        console.log("Words:", response.resposne?response.response.split(" ").length:0)
+        console.log("Words:", response.response?response.response.split(" ").length:0)
         console.log("Seconds / words:", response.total_duration?response.total_duration/response.response.split(" ").length/1000000000:0)
         console.log()
     }

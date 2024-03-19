@@ -38,10 +38,10 @@ esac
 if [ "$option_input" -eq 1 ] || [ "$option_input" -eq 2 ]; then
   # pip install python-docx PyPDF2
   # python3 /root/IDSA_bot/docs/add_data.py
-  docker cp ./Modelfile ollama:/Modelfile
-  docker cp ./Modelfile ollama:/Modelfile
-  docker exec -it ollama ollama create IDSAmodel -f ./Modelfile
-  docker exec -it -d ollama ollama run IDSAmodel
+  docker cp ./Modelfile ollama2:/Modelfile
+  docker cp ./Modelfile ollama2:/Modelfile
+  docker exec -it ollama2 ollama create IDSAmodel -f ./Modelfile
+  docker exec -it -d ollama2 ollama run IDSAmodel
 
   echo "Instalación completa!"
 
