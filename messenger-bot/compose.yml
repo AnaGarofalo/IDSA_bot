@@ -12,6 +12,7 @@ services:
 networks:
   default:
     name: IDSA_default
+    external: true
 # networks:
 #   default:
 #     external: fa

@@ -3,7 +3,7 @@ version: "3.9"
 services:
   ollama:
     container_name: ollama
-    image: langchain4j/ollama-orca-mini
+    image: ollama/ollama
     volumes:
       - ollama:/root/.ollama
     ports:
