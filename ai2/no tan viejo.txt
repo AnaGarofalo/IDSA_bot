@@ -406,3 +406,31 @@ MESSAGE assistant No estoy autorizado para brindar información de personas ajen
 
 
 
+
+
+
+<!-- 
+A continuación voy a pasarte una tabla con la información de los cursos. Cada fila representa una materia.
+Contiene el nombre de la materia,  el horario en el que se dictan las clases, la duración aproximada de cada clase, el link de acceso al zoom del aula virtual en que se dicta la clase, el link a la carpera de dropbox donde se guardan las grabaciones de las clases y el nombre del docente que dicta la materia.
+Te doy un ejemplo de cómo interpretar la tabla(fila 1): Las clases de Probabilidad y estadística se dictan los sábados a las 9:30hs. Cada clase tiene una duración aproximada de entre 30 y 45 minutos. El link de acceso al aula virtual donde se dicta la clase es https://us06web.zoom.us/j/89687373423. El link de acceso a la carpeta de dropbox que contiene las clases grabadas es https://www.dropbox.com/sh/q6t3pqhbpk07d20/AACto9UDGaFeHN3xA7ShEO6qa?dl=0. El nombre del docente a cargo es Ignacio Urteaga.
+Otro ejemplo(fila 5) Las clases de Introducción a R se dictan en dos turnos, el turno impar se dicta los lunes a las 21:30hs y el turno par los miércoles a las 21:30hs. Cada clase tiene una duración aproximada de entre 45 y 60 minutos, El link de acceso al aula virtual donde se dicta la clase es para ambos turnos https://us06web.zoom.us/j/87399432925. El link de acceso a la carpeta de dropbox que contiene las clases grabadas es para ambos turnos https://www.dropbox.com/sh/1joukq9c0rdy9c0/AADwXsmZEh029QOAiW3pQkK6a?dl=0. El nombre del docente a cargo es para ambos turnos Ignacio Urteaga.
+
+La tabla está en formato csv
+
+nombre,horario,duración_clase,link_zoom,link_clases_grabadas,docente_a_cargo
+Probabilidad y estadística,sábados 9.30hs,30 a 45 minutos,https://us06web.zoom.us/j/89687373423,https://www.dropbox.com/sh/q6t3pqhbpk07d20/AACto9UDGaFeHN3xA7ShEO6qa?dl=0, Ignacio Urteaga
+Programación lógica, sábado 11:00hs,60 minutos,https://us06web.zoom.us/j/81639326794,https://www.dropbox.com/sh/hxk9fg5hte7qjbk/AAC4xg4Yn_QXipqLOfkdnoD6a?dl=0, Ana Garófalo
+Bases de datos relacionales,sábados 12:30hs,30 a 45 minutos, https://us06web.zoom.us/j/89907365159,https://www.dropbox.com/sh/872njehdknxymuo/AABPTOuaE954w2f5qmrywKpfa?dl=0,Ignacio Urteaga 
+Introducción conceptual,turno impar:lunes 19:00hs y turno par:lunes 21:30, 30 a 45 minutos, turno par: https://us06web.zoom.us/j/84063268373 turno impar: https://us06web.zoom.us/j/89282513696,ambos turnos https://www.dropbox.com/sh/r6dz43hic1rm91k/AACsTA4TbilIlbdi38XbRalDa?dl=0, Ignacio Urteaga
+Introducción a R,turno impar:lunes 21:30hs turno par:miércoles 21:30hs, 45 a 60 minutos, ambos turnos https://us06web.zoom.us/j/87399432925, ambos turnos https://www.dropbox.com/sh/1joukq9c0rdy9c0/AADwXsmZEh029QOAiW3pQkK6a?dl=0, Julio Paredes
+Introducción a Python,turno impar:martes 19:00hs turno par:jueves 19:00hs,90 a 120 minutos, ambos turnos https://us06web.zoom.us/j/85284433578,ambos turnos https://www.dropbox.com/sh/31vj654rvesol0m/AAD4wvlXFYIbs83ntAGB2TLVa?dl=0, Nicolás del Fratte
+Curso circular de R para DCD y DCD R+P,clases teóricas:lunes 20:15hs clases prácticas:viernes 21.30hs,sin definir,clases teóricas:https://us06web.zoom.us/j/87009852952 clases prácticas:https://us06web.zoom.us/j/81092183169, clases teóricas:https://www.dropbox.com/sh/8vaoo6yeamoxdz7/AACRFCFwAaM_MEI--eu1O-jGa?dl=0 clases prácticas:https://www.dropbox.com/sh/hbmgcmjmcl1uccg/AABpf_lemqwrC_PDNAOZNy3Ta?dl=0, Julio Paredes
+Curso circular R para DDA R+P,jueves 19:00hs,30 a 45 minutos, https://us06web.zoom.us/j/89060828919,https://www.dropbox.com/sh/qcy4iyfyptgh3mt/AAAwLRs-6aTRzsA0wM437IIaa?dl=0, Ignacio Urteaga
+Curso circular de Python para DCD R+P y DDA R+P y DP,martes 19:30hs,1 a 3 horas,https://us06web.zoom.us/j/88124020422,https://www.dropbox.com/sh/kt95a5q8e161am8/AABGgpP8ikJ0WW8oLg1qcRlqa?dl=0,Anahí Romo
+Curso circular de R para DMLR,jueves 20:15hs,30 a 45 minutos,https://us06web.zoom.us/j/87536440674, clases teoricas:https://www.dropbox.com/scl/fo/adcqbcj0vz3iypbvgbowc/h?rlkey=z3w0yk2dyhy3nlsozmt6g8ko2&dl=0 clases practicas:https://www.dropbox.com/sh/z2zuql9mrss8jvr/AAAbbCH-lJTjbEkyj8x00_NYa?dl=0,Ignacio Urteaga
+Curso circular de Python para DMLP,jueves 20:30hs,1 a 3 horas,https://us06web.zoom.us/j/82603817293,clases teóricas:https://www.dropbox.com/sh/cpsy8oatju0fypj/AABhLynGPTE_Dlr2AyuexhDJa?dl=0 clases prácticas:https://www.dropbox.com/sh/tb0ugbbdn52javn/AACMado20pvJo1gQ7UGDr52Ba?dl=0,Anahí Romo
+Curso circular complementario para DCD R+P,jueves 21:30hs,45 a 60 minutos,https://us06web.zoom.us/j/85097235968,https://www.dropbox.com/sh/c6qb1ucb4sjsttb/AADYbfga82l3HYnWwprogDXFa?dl=0,Julio Paredes
+Taller de programación,sábados 11:00hs,30 a 45 minutos,https://us06web.zoom.us/j/89055900339,https://www.dropbox.com/scl/fo/1yvuq4aj8vwbo6e3a5qo7/h?rlkey=vcrtriepf1o63q2wv77zydnpe&dl=0, Ignacio Urteaga
+Tutorías proyecto final,lunes 18:00hs,30 minutos,https://us06web.zoom.us/j/85893957682,no disponible,Julio Paredes
+Deep Learning para DIA,jueves 21:30hs y viernes 20:15,60 minutos,https://us06web.zoom.us/j/83417143514?pwd=DPrtmYoi8jj899phGt996UnR9W5ifs.1, no disponible, Julio Paredes
+Matemática y Análisis de datos para DIA,martes 21:30hs y viernes 19:00hs,60 minutos,https://us06web.zoom.us/j/87598965617?pwd=fLMpw22Xc13RKxcjftKqvQNIiLJ0Xr.1,no disponible,Julio Paredes  -->

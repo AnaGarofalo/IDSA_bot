@@ -4,6 +4,7 @@ async function chatRequest(question) {
   let url = "http://ollama2:11434/api/generate"
   if (question.toLowerCase().includes("quién") || question.toLowerCase().includes("quien")  || question.toLowerCase().includes("docente")){
     url = "http://ollama:11434/api/generate"
+    return {response:"qué te importa"}
   }
   console.log("url", url)
   try {
